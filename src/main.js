@@ -4,12 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import Vuex from 'vuex';
+import store from './store';
+
 Vue.config.productionTip = false
 
-/* eslint-disable no-new */
+Vue.use(Vuex);
+
 new Vue({
-  el: '#app',
   router,
-  components: { App },
-  template: '<App/>'
-})
+  store: new Vuex.Store(store),
+  render: h => h(App),
+}).$mount('#app')
