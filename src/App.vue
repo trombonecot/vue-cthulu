@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img height="200px" src="./assets/cthulhu.jpg">
     <router-view/>
   </div>
 </template>
